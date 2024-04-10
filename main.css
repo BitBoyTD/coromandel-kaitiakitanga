@@ -1,0 +1,225 @@
+/* link to fonts */
+@font-face {
+  font-family: "lobster";
+  src: url(fonts/Arvo-Regular.ttf);
+}
+@font-face {
+  font-family: "nunito-variable";
+  src: url(fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "nunito-variable-italic";
+  src: url(fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "nunito-regular";
+  src: url(fonts/Nunito-Regular.ttf);
+}
+@font-face {
+  font-family: "nunito-italic";
+  src: url(fonts/Nunito-Italic.ttf);
+}
+
+/* declare color palette variables */
+:root {
+  --primary: #003261;
+  --secondary: #00aaff;
+  --bg: #faeab1;
+  --text: #fff;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  /* ensure there are no bars on the sides */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  /* set default font, colour and backups */
+  font-family: "nunito-variable", "nunito-regular", sans-serif;
+  color: var(--text);
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* set default font and sizes for elements */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "lobster";
+  color: var(--text);
+}
+h1 {
+  font-size: 4rem;
+  color: var(--text);
+  font-family: "lobster";
+  line-height: calc(1.2 * 4rem);
+}
+p {
+  font-size: 1.125rem;
+  line-height: calc(1.4 * 1.125rem);
+  max-width: 75ch !important;
+  color: var(--text);
+}
+a {
+  font-size: 1.125rem;
+  line-height: calc(1.4 * 1.125rem);
+  max-width: 75ch !important;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+  margin: 0;
+}
+a:hover {
+  color: var(--primary);
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 7vh;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary);
+}
+/* divs that seperate different sets of items in header bar */
+header div,
+nav {
+  margin: 1em;
+  display: flex;
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+}
+.header-margin-right {
+  margin-right: 1em;
+}
+#logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Styles */
+main {
+  /* stop content from being hidden under nav bar */
+  margin: calc(7vh + 2vw) 0 2vw 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index-main {
+  /* index page doesn't need the extra 2vw */
+  margin-top: 7vh;
+}
+/* centering hero text */
+#hero-section {
+  position: relative;
+  margin-bottom: 2vw;
+}
+#hero-text-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#hero-text {
+  text-align: center;
+}
+/* center for readablity */
+article {
+  width: 80vw;
+}
+.img-text-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vw;
+  background-color: var(--secondary);
+}
+.text-div {
+  width: 40vw;
+  margin: 0 2vw;
+}
+/* futher reading section */
+#further-reading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+.further-reading-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(76vw / 3);
+  height: calc((76vw / 3) + 5vw);
+  background-color: var(--secondary);
+}
+.centering-div {
+  height: 5vw;
+  width: calc(76vw / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+#recommended-reading {
+  background-color: var(--primary);
+}
+#recommended-reading a {
+  text-decoration-color: var(--secondary);
+}
+#recommended-reading a:hover {
+  color: var(--secondary);
+}
+.further-reading-margin {
+  margin-top: 4vw;
+}
+/* Footer Styles */
+footer {
+  display: flex;
+  background-color: var(--primary);
+  height: 40vh;
+  min-height: 292px;
+}
+.footer-section {
+  width: calc(50vw - 1em);
+  height: 40vh;
+  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-text {
+  color: var(--bg);
+  margin: 0;
+}
+.footer-link {
+  color: var(--bg);
+  text-decoration-color: var(--secondary);
+}
+.footer-link:hover {
+  color: var(--secondary);
+}
